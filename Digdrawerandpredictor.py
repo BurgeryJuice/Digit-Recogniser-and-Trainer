@@ -98,7 +98,6 @@ def main():
 	drawing = False
 	brush_radius = 12
 	prediction = None
-	confidence = None
 
 	running = True
 	while running:
@@ -121,17 +120,14 @@ def main():
 				if event.key == pygame.K_c:
 					canvas.fill((0, 0, 0))
 					prediction = None
-					confidence = None
 
 				if event.key == pygame.K_p:
 					x_input = preprocess_canvas(canvas)
 					if x_input is not None:
 						out = forward_pass(x_input, W1, b1, W2, b2, W3, b3)
 						prediction = int(np.argmax(out))
-						confidence = float(np.max(out))
 					else:
 						prediction = None
-						confidence = None
 
 		if drawing:
 			mx, my = pygame.mouse.get_pos()
@@ -156,9 +152,7 @@ def main():
 
 		if prediction is not None:
 			pred_text = font.render(f"Prediction: {prediction}", True, (120, 255, 140))
-			conf_text = small_font.render(f"Confidence: {confidence * 100:.2f}%", True, (220, 220, 220))
 			screen.blit(pred_text, (340, 210))
-			screen.blit(conf_text, (340, 246))
 		else:
 			wait_text = small_font.render("Prediction will appear here", True, (180, 180, 180))
 			screen.blit(wait_text, (340, 220))
@@ -171,3 +165,5 @@ def main():
 
 if __name__ == "__main__":
 	main()
+
+
