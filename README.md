@@ -26,4 +26,4 @@ $$DZ_2 = \text{np.dot}(W_3^T, DZ_3) \odot \sigma'(Z_2)$$
 ## 🛠️ How to Run
 1. **Clone the repo:**
    ```bash
-   git clone [https://github.com/BurgeryJuice/](https://github.com/BurgeryJuice/)[YOUR_REPO_NAME]
+   git clone [https://github.com/BurgeryJuice/Digit-Recogniser-and-Trainer.git](https://github.com/BurgeryJuice/Digit-Recogniser-and-Trainer.git)
