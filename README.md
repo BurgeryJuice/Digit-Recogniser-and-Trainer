@@ -1,1 +1,4 @@
-A Simple Digit recogniser trained on MNSIT number database using a 3L neural network . Current max accuracy for 100 epochs: 84.181 and prediction is inaccurate for certain numbers
+Built a Neural Network using Numpy and implementing Vectorization.
+Also contains a Digit recogniser which imports the weights and biases from the Training run and enables drawing and prediction
+Commit 1: Not yet optimized , more inclined towards understanding backpropagation and vectorization examples.
+Current accuracy is not upto par
