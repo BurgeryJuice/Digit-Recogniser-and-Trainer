@@ -19,7 +19,7 @@ $$DZ_2 = \text{np.dot}(W_3^T, DZ_3) \odot \sigma'(Z_2)$$
 > **Note:** The backpropagation engine explicitly handles the derivative of the ReLU function ($Z > 0$) to propagate errors back to the initial weights.
 
 ## 📊 Performance
-* **Accuracy:** Currently achieving **~76%**.
+* **Accuracy:** Currently achieving **~84%**.
 * **Limitation:** Accuracy is constrained by the low hidden layer dimension (16 neurons) and the use of Sigmoid on the output layer instead of Softmax. 
 * **Optimization:** Stochastic Gradient Descent (SGD) with a learning rate ($\alpha$) of $0.1$.
 
