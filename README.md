@@ -1,6 +1,6 @@
 # MNIST from Scratch: A Deep Dive into Vectorized Backpropagation
 
-This repository contains a manual implementation of a 3nd-order Neural Network (3 layers) to solve the MNIST digit recognition challenge. Built using only **NumPy**, this project focuses on the underlying mathematics of gradient descent and weight optimization without the use of high-level frameworks like PyTorch or TensorFlow.
+This repository contains a manual implementation of a 3L Neural Network (3 layers) to solve the MNIST digit recognition challenge. Built using only **NumPy**, this project focuses on the underlying mathematics of gradient descent and weight optimization without the use of high-level frameworks like PyTorch or TensorFlow.
 
 ## 🧠 Architectural Overview
 The model follows a $(784 \rightarrow 16 \rightarrow 16 \rightarrow 10)$ architecture:
