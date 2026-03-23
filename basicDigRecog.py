@@ -70,8 +70,18 @@ for i in range(a):
     HL1.W = HL1.W-lr* DW1
     HL1.b = HL1.b-lr* DB1
     if i % 10 == 0:
-        acc = get_accuracy(HL3.A, y_train)
-        print(f"Epoch {i}: Accuracy {acc*100}%")   
+        Z1_test = np.dot(HL1.W, x_test) + HL1.b
+        A1_test = HL1.relu(Z1_test)
+        Z2_test = np.dot(HL2.W, A1_test) + HL2.b
+        A2_test = HL2.relu(Z2_test)
+        Z3_test = np.dot(HL3.W, A2_test) + HL3.b
+        A3_test = HL3.sigmoid(Z3_test)
+
+        
+        train_acc = get_accuracy(HL3.A, y_train)
+        test_acc = get_accuracy(A3_test, y_test)
+
+        print(f"Epoch {i} | Train Acc: {train_acc*100:.2f}% | Test Acc: {test_acc*100:.2f}%") 
 #export
 weights_path = Path(__file__).resolve().parent / "mnist_weights.npz"
 np.savez(weights_path, 
