@@ -10,7 +10,7 @@ I implemented the full backward pass using vectorized calculus to handle the dat
 
 ##  Performance
 * **Accuracy:** Currently  **~84%**.
-* **Limitation:** Accuracy is constrained by the low hidden layer dimension (16 neurons) and the use of Sigmoid on the output layer instead of other functions like Softmax. 
+* **Limitation:** Accuracy is constrained probably by the low hidden layer neurons count (16 neurons) and the use of Sigmoid on the output layer instead of other functions like Softmax. 
 
 
 ## How to Run
